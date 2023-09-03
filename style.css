@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Inter&family=Raleway&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    height: 100vh;
+    height: 100dvh;
+}
+
+.nav{
+    width: 100vw;
+    width: 100dvw;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 9rem;
+    list-style: none;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+
+
+.sub-nav{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.sub-nav-items{
+    display: flex;
+    align-items: center;
+}
+.sub-nav-items > input, .sub-nav-items > select, .sub-nav-items > button{
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border: 1px solid transparent;
+    outline: none;
+}
+.sub-nav-items > input, .sub-nav-items > select{
+    background-color: rgb(86, 86, 86);
+    color: #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+.sub-nav-items > button{
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(131, 131, 131);
+}
+.sub-nav-items > button:hover{
+    background-color: rgb(46, 46, 46);
+    color: rgb(171, 171, 171);
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+}
+
+.wrapper{
+    display: flex;
+    padding: 2rem;
+    mix-blend-mode: multiply;
+}
+main{
+    position: relative;
+    height: fit-content;
+}
+.bg{
+    position: absolute;
+    opacity: 0.6;
+    filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.image{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.image > img{
+    width: 90%;
+    height: 100%;
+}
+.text{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: rgb(18, 18, 109);
+}
+.text > h3{
+    font-size: 2rem;
+}
+.text > p{
+    letter-spacing: 1px;
+    line-height: 25px;
+    overflow-y: auto;
+    font-weight: 600;
+}
+
+.text > p::-webkit-scrollbar{
+    display: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+@media screen and (width <= 1360px) {
+    .nav{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .text{
+        height: 400px;
+    }
+    .text>p{
+        line-height: 30px;
+    }
+}
+@media screen and (width <= 960px) {
+    body{
+        height: fit-content;
+    }
+    .sub-nav{
+        width: 75vw;
+        width: 75dvw;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sub-nav-items{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .sub-nav-items > input, .sub-nav-items > select, .sub-nav-items > button{
+        width: 100%;
+    }
+    .wrapper{
+        flex-direction: column;
+    }
+    .image{
+        width: 100%;
+    }
+    .text{
+        width: 100%;
+    }
+    
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="NASA_logo.svg" type="image/x-icon">
+    <title>Nasa-image of the day</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav">
+            <li id="heading" class="nav-items">Nasa-Picture Of The Day</li>
+            <li class="nav-items">
+                <ul class="sub-nav">
+                    <li class="sub-nav-items">
+                        <label for="date">Search a date :&nbsp;</label>
+                        <input id="date" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" type="text" placeholder="Enter a date">
+                    </li>
+                    <li class="sub-nav-items">
+                        <button id="search-btn">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </li>
+                    <li class="sub-nav-items">
+                        <label for="prev">Previous Searches :&nbsp;</label>
+                        <select name="previous-search" id="prev">
+                            <option value="">---Select a date---</option>
+                        </select>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="bg"></div>
+        <div class="wrapper">
+            <div id="image" class="image">
+                
+            </div>
+            <div id="text" class="text">
+                
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
